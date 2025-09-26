@@ -1,0 +1,46 @@
+services:
+  # Base de datos PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: tic-tac-toe-db
+    environment:
+      POSTGRES_DB: tic_tac_toe_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/database_init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - tic-tac-toe-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d tic_tac_toe_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Aplicación Full-Stack (Frontend + Backend unificados)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tic-tac-toe-fullstack
+    env_file:
+      - .env.docker
+    ports:
+      - "80:80"
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - tic-tac-toe-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  tic-tac-toe-network:
+    driver: bridge

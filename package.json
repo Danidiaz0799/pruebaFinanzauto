@@ -1,0 +1,22 @@
+{
+    "name": "tic-tac-toe-fullstack",
+    "version": "1.0.0",
+    "description": "Aplicación full-stack de Tic-Tac-Toe con React, Node.js, Socket.IO y PostgreSQL",
+    "main": "backend/src/server.js",
+    "scripts": {
+        "docker:build": "docker-compose build --no-cache",
+        "docker:up": "docker-compose up -d",
+        "docker:down": "docker-compose down",
+        "docker:logs": "docker-compose logs -f app",
+        "docker:restart": "docker-compose restart app"
+    },
+    "keywords": [
+        "react",
+        "nodejs",
+        "postgresql",
+        "websockets",
+        "docker"
+    ],
+    "author": "Steven Diaz",
+    "license": "MIT"
+}
