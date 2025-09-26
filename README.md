@@ -2,6 +2,10 @@
 
 Una aplicación completa de Tic-Tac-Toe multijugador desarrollada con Node.js y React con Vite.
 
+<p align="left">
+  <img src="frontend/src/images/home.png" alt="Pantalla de Inicio" width="350" height="600">
+</p>
+
 ## 🚀 Tecnologías Utilizadas
 
 ### Frontend
@@ -34,6 +38,14 @@ Una aplicación completa de Tic-Tac-Toe multijugador desarrollada con Node.js y 
 ### 🎮 Modos de Juego
 
 #### 🌐 Multijugador Online
+<p align="left">
+  <img src="frontend/src/images/online.png" alt="Pantalla de Inicio" width="350" height="350">
+</p>
+
+<p align="rigt">
+  <img src="frontend/src/images/waiting.png" alt="Pantalla de Inicio" width="350" height="300">
+</p>
+
 - Jugar contra otros jugadores conectados desde cualquier lugar
 - Crear salas privadas o unirse a salas existentes
 - Sistema de ranking global
@@ -41,9 +53,14 @@ Una aplicación completa de Tic-Tac-Toe multijugador desarrollada con Node.js y 
 - Comunicación en tiempo real con WebSockets
 
 #### 👥 Multijugador Local
+<p align="rigt">
+  <img src="frontend/src/images/local.png" alt="Pantalla de Inicio" width="400" height="440">
+</p>
+
 - Jugar con un otro usuario en el mismo dispositivo
 - Estadísticas locales guardadas en el navegador
 - Sin necesidad de conexión a internet para jugar
+### ⏳ Sala de Espera
 
 ## 🛠️ Instalación y Configuración
 
@@ -55,7 +72,7 @@ Una aplicación completa de Tic-Tac-Toe multijugador desarrollada con Node.js y 
 
 1. **Clonar el repositorio**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/Danidiaz0799/pruebaFinanzauto>
    cd pruebaFinanzauto
    ```
 
@@ -78,7 +95,7 @@ Una aplicación completa de Tic-Tac-Toe multijugador desarrollada con Node.js y 
    docker-compose down
    ```
 
-## � Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 pruebaFinanzauto/
