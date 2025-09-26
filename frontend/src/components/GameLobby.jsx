@@ -46,7 +46,6 @@ const GameLobby = ({ user, onStartGame, onBackToLogin }) => {
       })
 
       socket.on('error', (error) => {
-        console.error('Error:', error.message)
         setLoading(false)
         setWaitingInRoom(null)
       })

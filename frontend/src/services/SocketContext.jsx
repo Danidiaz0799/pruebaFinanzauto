@@ -36,7 +36,7 @@ export const SocketProvider = ({ children }) => {
             localStorage.setItem('tic_tac_toe_user', JSON.stringify(data.user))
           })
         } catch (error) {
-          console.error('Error al reconectar usuario:', error)
+          localStorage.removeItem('tic_tac_toe_user')
         }
       }
     })
@@ -46,7 +46,6 @@ export const SocketProvider = ({ children }) => {
     })
 
     newSocket.on('connect_error', (error) => {
-      console.error('Error de conexion WebSocket:', error)
       setConnected(false)
     })
 

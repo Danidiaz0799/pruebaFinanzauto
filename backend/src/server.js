@@ -46,9 +46,6 @@ async function startServer() {
 
     server.listen(PORT, () => {
       console.log(`Servidor ejecutándose en puerto ${PORT}`);
-      console.log(`Health check: http://localhost:${PORT}/health`);
-      console.log(`API Stats: http://localhost:${PORT}/api/stats`);
-      console.log(`API Ranking: http://localhost:${PORT}/api/ranking`);
     });
   } catch (error) {
     console.error('Error al inicializar el servidor:', error);

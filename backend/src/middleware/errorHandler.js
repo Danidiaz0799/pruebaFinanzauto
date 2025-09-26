@@ -1,6 +1,4 @@
 function errorHandler(err, req, res, next) {
-  console.error('Error capturado:', err);
-
   if (err.name === 'ValidationError') {
     return res.status(400).json({
       success: false,

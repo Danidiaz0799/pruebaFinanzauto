@@ -22,7 +22,6 @@ function App() {
         setUser(userData)
         setCurrentView('mode-selector')
       } catch (error) {
-        console.error('Error al restaurar sesión:', error)
         localStorage.removeItem('tic_tac_toe_user')
       }
     }
