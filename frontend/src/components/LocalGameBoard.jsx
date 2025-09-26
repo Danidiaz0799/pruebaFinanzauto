@@ -20,7 +20,6 @@ const LocalGameBoard = ({ user, onBackToMode }) => {
   const [showNameEditor, setShowNameEditor] = useState(false)
 
   useEffect(() => {
-    // Cargar estadísticas del localStorage
     const savedStats = localStorage.getItem('localGameStats')
     if (savedStats) {
       const stats = JSON.parse(savedStats)
@@ -39,9 +38,9 @@ const LocalGameBoard = ({ user, onBackToMode }) => {
 
   const checkWinner = (board) => {
     const winPatterns = [
-      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Filas
-      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columnas  
-      [0, 4, 8], [2, 4, 6] // Diagonales
+      [0, 1, 2], [3, 4, 5], [6, 7, 8],
+      [0, 3, 6], [1, 4, 7], [2, 5, 8],
+      [0, 4, 8], [2, 4, 6]
     ]
 
     for (const pattern of winPatterns) {
@@ -86,7 +85,6 @@ const LocalGameBoard = ({ user, onBackToMode }) => {
       setWinner(result.winner)
       setWinningLine(result.winningLine)
       
-      // Actualizar estadísticas
       const newStats = { ...gameStats }
       if (result.winner === 'X') {
         newStats.playerX.wins++
@@ -100,7 +98,6 @@ const LocalGameBoard = ({ user, onBackToMode }) => {
       setGameStatus('finished')
       setWinner(null)
       
-      // Actualizar estadísticas para empate
       const newStats = { ...gameStats }
       newStats.draws++
       newStats.totalGames++

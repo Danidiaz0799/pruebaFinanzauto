@@ -30,9 +30,7 @@ function handleSocketConnection(io) {
           }
         });
 
-        console.log(`Usuario registrado: ${user.username} (ID: ${user.id})`);
       } catch (error) {
-        console.error('Error al registrar usuario:', error);
         socket.emit('error', { message: 'Error al registrar usuario' });
       }
     });
@@ -77,9 +75,7 @@ function handleSocketConnection(io) {
           player1: roomData.player1.username
         });
 
-        console.log(`Sala creada: ${roomId} por ${socket.username}`);
       } catch (error) {
-        console.error('Error al crear sala:', error);
         socket.emit('error', { message: 'Error al crear sala' });
       }
     });
@@ -136,7 +132,6 @@ function handleSocketConnection(io) {
         });
 
       } catch (error) {
-        console.error('Error al unirse a sala:', error);
         socket.emit('error', { message: 'Error al unirse a la sala' });
       }
     });
@@ -224,7 +219,6 @@ function handleSocketConnection(io) {
         }
 
       } catch (error) {
-        console.error('Error al realizar movimiento:', error);
         socket.emit('error', { message: 'Error al realizar movimiento' });
       }
     });
@@ -264,7 +258,6 @@ function handleSocketConnection(io) {
           });
         }
       } catch (error) {
-        console.error('Error al obtener estadísticas:', error);
         socket.emit('error', { message: 'Error al obtener estadísticas' });
       }
     });
