@@ -75,7 +75,7 @@ const GameLobby = ({ user, onStartGame, onBackToLogin }) => {
     return (
       <div className="lobby-container">
         <div className="waiting-room">
-          <h2>� Sala Online Creada</h2>
+          <h2>Sala Online Creada</h2>
           <div className="waiting-info">
             <p>Sala ID: <strong>{waitingInRoom.roomId}</strong></p>
             <p>Esperando a otro jugador en línea...</p>
@@ -97,7 +97,7 @@ const GameLobby = ({ user, onStartGame, onBackToLogin }) => {
   return (
     <div className="lobby-container">
       <div className="lobby-header">
-        <h2>� Sala de Juego Online</h2>
+        <h2> Sala de Juego Online</h2>
         <div className="user-stats">
           {playerStats && (
             <div className="stats-card">
@@ -132,7 +132,7 @@ const GameLobby = ({ user, onStartGame, onBackToLogin }) => {
       </div>
 
       <div className="available-rooms">
-        <h3>� Salas Disponibles Online</h3>
+        <h3>Salas Disponibles Online</h3>
         {loading && <div className="loading">⏳ Buscando salas...</div>}
         {availableRooms.length === 0 && !loading && (
           <div className="no-rooms">

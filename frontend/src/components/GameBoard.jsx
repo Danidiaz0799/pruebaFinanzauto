@@ -104,7 +104,7 @@ const GameBoard = ({ user, gameData, onBackToLobby }) => {
         <button className="back-button" onClick={handleLeaveGame}>
           ← Volver al Lobby Online
         </button>
-        <h2>� Partida Online</h2>
+        <h2>Partida Online</h2>
       </div>
 
       <div className="game-info">
